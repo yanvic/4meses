@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>4 Meses ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --rose:#b5394f;
+  --blush:#f2c4ce;
+  --petal:#fce8ed;
+  --cream:#fdf8f5;
+  --warm:#7a3a45;
+  --gold:#c8935a;
+  --dark:#2c1a1e;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'Jost',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--dark);font-family:var(--sans);font-weight:300;overflow-x:hidden}
+
+/* ── PETALS ── */
+.petal-wrap{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.p{position:absolute;border-radius:50% 0 50% 0;opacity:0;animation:fall linear infinite}
+@keyframes fall{
+0%{transform:translateY(-60px) rotate(0deg) scale(.8);opacity:0}
+8%{opacity:.22}
+90%{opacity:.12}
+100%{transform:translateY(105vh) rotate(400deg) scale(1);opacity:0}
+}
+
+/* ── HERO ── */
+.hero{
+min-height:100vh;position:relative;z-index:1;
+display:flex;flex-direction:column;align-items:center;justify-content:center;
+text-align:center;padding:5rem 2rem 4rem;
+background:radial-gradient(ellipse at 55% 35%, #fce4ec 0%, var(–cream) 68%);
+}
+.hero-eyebrow{
+font-size:.68rem;letter-spacing:.45em;text-transform:uppercase;
+color:var(–rose);margin-bottom:1.8rem;
+animation:up .7s ease both;
+}
+.hero-num{
+font-family:var(–serif);font-size:clamp(7rem,25vw,15rem);
+font-weight:300;line-height:.85;color:var(–rose);
+animation:up .8s .08s ease both;
+}
+.hero-word{
+font-family:var(–serif);font-style:italic;
+font-size:clamp(2rem,7vw,4.5rem);font-weight:300;
+color:var(–dark);margin-top:.2rem;
+animation:up .8s .15s ease both;
+}
+.hero-divider{
+width:60px;height:1px;background:var(–rose);opacity:.4;
+margin:2rem auto;animation:up .8s .22s ease both;
+}
+.hero-sub{
+font-family:var(–serif);font-style:italic;
+font-size:clamp(.95rem,2.8vw,1.35rem);
+color:var(–warm);max-width:380px;line-height:1.75;
+animation:up .8s .3s ease both;
+}
+.hero-days{
+margin-top:1.5rem;font-size:.72rem;letter-spacing:.25em;
+text-transform:uppercase;color:var(–gold);
+animation:up .8s .38s ease both;
+}
+.scroll-cue{
+position:absolute;bottom:2.2rem;
+font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;
+color:var(–rose);opacity:.45;animation:bob 2.4s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* ── COUNTER ── */
+.counter{
+position:relative;z-index:1;
+padding:4.5rem 2rem;
+background:var(–rose);color:#666666;text-align:center;
+}
+.counter-label{
+font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;
+opacity:.65;margin-bottom:2rem;
+}
+.counter-row{
+display:flex;justify-content:center;align-items:flex-end;
+gap:clamp(.4rem,3vw,2.5rem);flex-wrap:wrap;
+}
+.c-item{display:flex;flex-direction:column;align-items:center;min-width:70px}
+.c-n{
+font-family:var(–serif);font-size:clamp(3rem,10vw,5.5rem);
+font-weight:300;line-height:1;
+}
+.c-u{font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;opacity:.6;margin-top:.15rem}
+.c-sep{font-size:2.5rem;opacity:.3;padding-bottom:.7rem}
+
+/* ── PHOTOS ── */
+.photos{position:relative;z-index:1;padding:5.5rem 2rem;background:var(–cream)}
+.sec-title{
+font-family:var(–serif);font-size:clamp(2rem,6vw,3.5rem);font-weight:300;
+color:var(–dark);text-align:center;margin-bottom:.4rem;
+}
+.sec-sub{
+font-family:var(–serif);font-style:italic;
+font-size:.95rem;color:var(–gold);text-align:center;
+margin-bottom:3.5rem;letter-spacing:.06em;
+}
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+gap:1.4rem;max-width:900px;margin:auto;
+}
+.card{
+background:#fff;border-radius:12px;overflow:hidden;
+box-shadow:0 4px 24px rgba(180,80,90,.1);
+transition:transform .35s ease, box-shadow .35s ease;
+cursor:pointer;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(180,80,90,.18)}
+.card-img{
+width:100%;aspect-ratio:4/5;
+background:var(–petal);
+display:flex;flex-direction:column;align-items:center;justify-content:center;
+gap:.6rem;position:relative;overflow:hidden;
+}
+.card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover .card-img img{transform:scale(1.06)}
+.ph-ico{font-size:2.2rem;opacity:.35}
+.ph-lbl{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(–rose);opacity:.5}
+.card-body{padding:1.1rem 1.3rem 1.3rem}
+.card-caption{
+font-family:var(–serif);font-style:italic;
+font-size:1.05rem;color:var(–dark);margin-bottom:.25rem;
+}
+.card-date{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(–gold)}
+
+/* ── MESSAGE ── */
+.message{
+position:relative;z-index:1;
+padding:6rem 2rem;text-align:center;
+background:linear-gradient(160deg,var(–petal) 0%,var(–cream) 100%);
+}
+.quote{
+font-family:var(–serif);font-size:5.5rem;line-height:.4;
+color:var(–rose);opacity:.18;display:block;margin-bottom:.8rem;
+}
+.message-text{
+font-family:var(–serif);font-style:italic;
+font-size:clamp(1.2rem,3.8vw,1.75rem);line-height:1.75;
+color:var(–dark);max-width:620px;margin:auto;
+}
+.message-sign{
+margin-top:2.5rem;font-size:.65rem;letter-spacing:.28em;
+text-transform:uppercase;color:var(–gold);
+}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;z-index:1;padding:5.5rem 2rem;background:var(–cream)}
+.tl-list{position:relative;max-width:580px;margin:3rem auto 0;padding-left:1.8rem}
+.tl-list::before{
+content:’’;position:absolute;left:0;top:.4rem;bottom:.4rem;
+width:1px;background:linear-gradient(to bottom,transparent,var(–blush) 20%,var(–blush) 80%,transparent);
+}
+.tl-item{position:relative;margin-bottom:2.8rem}
+.tl-item::before{
+content:‘♥’;position:absolute;left:-2.2rem;top:.1rem;
+color:var(–rose);font-size:.65rem;
+}
+.tl-mo{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(–gold);margin-bottom:.3rem}
+.tl-text{font-family:var(–serif);font-size:1.05rem;line-height:1.65;color:var(–dark)}
+
+/* ── FOOTER ── */
+footer{
+position:relative;z-index:1;
+background:var(–dark);color:var(–petal);
+padding:4rem 2rem;text-align:center;
+}
+.footer-big{
+font-family:var(–serif);font-style:italic;
+font-size:clamp(1.6rem,5vw,3rem);margin-bottom:.6rem;
+}
+footer small{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;opacity:.3}
+
+/* ── LIGHTBOX ── */
+.lb{display:none;position:fixed;inset:0;z-index:200;
+background:rgba(44,26,30,.92);align-items:center;justify-content:center}
+.lb.on{display:flex}
+.lb img{max-width:90vw;max-height:88vh;border-radius:8px}
+.lb-x{position:absolute;top:1.5rem;right:1.8rem;font-size:2rem;
+color:#fff;opacity:.5;cursor:pointer;line-height:1}
+.lb-x:hover{opacity:1}
+</style>
+
+</head>
+<body>
+
+<!-- petals JS injected -->
+
+<div class="petal-wrap" id="petals"></div>
+
+<!-- HERO -->
+
+<section class="hero">
+  <p class="hero-eyebrow">uma data muito especial</p>
+  <div class="hero-num">4</div>
+  <div class="hero-word">meses</div>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">Quatro meses inteiros de você — e eu ainda fico com o coração acelerado.</p>
+  <p class="hero-days">121 dias juntos ❤</p>
+  <span class="scroll-cue">↓ role para baixo ↓</span>
+</section>
+
+<!-- COUNTER -->
+
+<section class="counter" id="counter">
+  <p class="counter-label">juntos há exatamente</p>
+  <div class="counter-row">
+    <div class="c-item"><span class="c-n" id="cd">486</span><span class="c-u">dias</span></div>
+    <span class="c-sep">·</span>
+    <div class="c-item"><span class="c-n" id="ch">--</span><span class="c-u">horas</span></div>
+    <span class="c-sep">·</span>
+    <div class="c-item"><span class="c-n" id="cm">--</span><span class="c-u">minutos</span></div>
+    <span class="c-sep">·</span>
+    <div class="c-item"><span class="c-n" id="cs">--</span><span class="c-u">segundos</span></div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+
+<section class="photos" id="photos">
+  <h2 class="sec-title">Nossos momentos</h2>
+  <p class="sec-sub">cada foto, uma memória que fica para sempre</p>
+
+  <div class="card-grid">
+    <!--
+      💡 COMO ADICIONAR FOTOS:
+      Dentro de .card-img, substitua o bloco ph-ico/ph-lbl por:
+        <img src="foto1.jpg" alt="descrição" />
+      E edite .card-caption e .card-date com seus textos.
+    -->
+    <div class="card" onclick="openLb(this)">
+      <div class="card-img">
+ <img src="foto1.jpeg" alt="descrição" />
+      </div>
+      <div class="card-body">
+        <p class="card-caption">Nosso primeiro encontro</p>
+        <p class="card-date">Dezembro · 2025</p>
+      </div>
+    </div>
+
+<div class="card" onclick="openLb(this)">
+  <div class="card-img">
+   <img src="foto3.jpeg" alt="descrição" /></div>
+  <div class="card-body">
+    <p class="card-caption">Um momento especial</p>
+    <p class="card-date">Janeiro · 2026</p>
+  </div>
+</div>
+
+<div class="card" onclick="openLb(this)">
+  <div class="card-img">
+   <img src="foto2.jpeg" alt="descrição" /></div>
+  <div class="card-body">
+    <p class="card-caption">O sorriso que eu amo</p>
+    <p class="card-date">Fevereiro · 2026</p>
+  </div>
+</div>
+
+<div class="card" onclick="openLb(this)">
+  <div class="card-img">
+   <img src="foto4.jpeg" alt="descrição" /></div>
+  <div class="card-body">
+    <p class="card-caption">Juntos ❤</p>
+    <p class="card-date">Março · 2026</p>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+<!-- MESSAGE -->
+
+<section class="message" id="message">
+  <span class="quote">"</span>
+  <p class="message-text">
+    <!-- ✏️ EDITE A MENSAGEM AQUI -->
+    Você me faz querer ser melhor todos os dias.
+    Cada mensagem sua, cada risada compartilhada,
+    cada momento simples ao seu lado —
+    guardo tudo com o maior carinho do mundo.
+    Obrigado por ser exatamente quem você é,
+    e por deixar eu fazer parte da sua vida.
+    Feliz 4 meses, meu amor. ❤
+  </p>
+  <p class="message-sign">— com todo o meu amor, yan</p>
+</section>
+
+<!-- TIMELINE -->
+
+<section class="timeline" id="log">
+  <h2 class="sec-title">Nossa história</h2>
+  <p class="sec-sub">mês a mês, de dezembro até hoje</p>
+
+  <div class="tl-list">
+    <!-- ✏️ EDITE OS TEXTOS DE CADA MÊS -->
+    <div class="tl-item">
+      <p class="tl-mo">Dezembro · 2025</p>
+      <p class="tl-text">O começo de tudo. O momento em que a vida resolveu me dar o melhor presente do ano.</p>
+    </div>
+    <div class="tl-item">
+      <p class="tl-mo">Janeiro · 2026</p>
+      <p class="tl-text">Descobrindo cada detalhe seu. Cada conversa revelando uma nova razão para sorrir.</p>
+    </div>
+    <div class="tl-item">
+      <p class="tl-mo">Fevereiro · 2026</p>
+      <p class="tl-text">Já não consigo mais imaginar os dias sem você. Você virou parte da minha rotina favorita.</p>
+    </div>
+    <div class="tl-item">
+      <p class="tl-mo">Março → Abril · 2026 ❤</p>
+      <p class="tl-text">Quatro meses juntos e o sentimento só cresce. Mal posso esperar por tudo que ainda vem por aí.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <p class="footer-big">Feliz 4 meses, Ingrid Guedes ❤</p>
+  <small>feito com muito amor · sempre</small>
+</footer>
+
+<!-- LIGHTBOX -->
+
+<div class="lb" id="lb" onclick="closeLb()">
+  <span class="lb-x" onclick="closeLb()">×</span>
+  <img id="lb-img" src="" alt=""/>
+</div>
+
+<script>
+// ── PÉTALAS ──
+const wrap = document.getElementById('petals');
+for(let i=0;i<22;i++){
+  const p=document.createElement('div');p.className='p';
+  const size=7+Math.random()*12;
+  p.style.cssText=`
+    left:${Math.random()*100}%;
+    width:${size}px;height:${size}px;
+    background:${Math.random()>.5?'#e8a0b0':'#f5c6d0'};
+    animation-duration:${8+Math.random()*9}s;
+    animation-delay:${-Math.random()*12}s;
+  `;
+  wrap.appendChild(p);
+}
+
+// ── CONTADOR ──
+// Data de início: 07/12/2025
+const START = new Date('2025-12-07T00:00:00');
+function pad(n){return String(n).padStart(2,'0')}
+function tick(){
+  const diff=Date.now()-START.getTime();
+  document.getElementById('cd').textContent=Math.floor(diff/86400000);
+  document.getElementById('ch').textContent=pad(Math.floor(diff/3600000)%24);
+  document.getElementById('cm').textContent=pad(Math.floor(diff/60000)%60);
+  document.getElementById('cs').textContent=pad(Math.floor(diff/1000)%60);
+}
+tick();setInterval(tick,1000);
+
+// ── LIGHTBOX ──
+function openLb(card){
+  const img=card.querySelector('img');if(!img)return;
+  document.getElementById('lb-img').src=img.src;
+  document.getElementById('lb').classList.add('on');
+}
+function closeLb(){document.getElementById('lb').classList.remove('on')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
+
+// ── FADE-IN no scroll ──
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.style.transition='opacity .7s ease, transform .7s ease';
+      e.target.style.opacity='1';e.target.style.transform='none';
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.card,.tl-item').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';io.observe(el);
+});
+</script>
+
+</body>
+</html>
